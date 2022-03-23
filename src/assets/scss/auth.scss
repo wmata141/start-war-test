@@ -1,0 +1,112 @@
+@import "./variables";
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~bootstrap/scss/bootstrap.scss';
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.btn {
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+a {
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.auth {
+	.auth-background-holder {
+		height: 100vh;
+		min-height: 100%;
+	}
+}
+
+.auth-main-col, .auth-background-col{
+	position: relative;
+}
+
+.auth-main-col {
+	margin: auto;
+}
+
+.auth-background-col {
+	background: rgba($theme-text-color-primary, 0.6);
+}
+
+.auth-background-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+}
+
+.video-container {
+  top: 0%;
+  left: 0%;
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+video.fillWidth {
+  width: 100%;
+}
+
+.auth-wrapper {
+	background: white;
+	height: 100vh;
+	
+	.auth-body {
+		width: 360px;
+	}
+	
+	.auth-heading {
+		font-size: 1.5rem;
+	}
+	
+	// .auth-option {
+	// 	font-size: 0.875rem;
+	// 	color: #fff;
+	// 	> a {
+	// 		color: #fff
+	// 	}
+	// }
+
+	// .forgot-password {
+	// 	> a {
+	// 		color: #fff
+	// 	}
+	// }
+
+	.login-to-account {
+		font-weight: bold;
+		color: #fff;
+	}
+
+	input:focus {
+		box-shadow: none;
+	}
+}
+
+@media (max-width: 767.98px) { 
+	.auth-background-col {
+		display: none;
+	}	
+}

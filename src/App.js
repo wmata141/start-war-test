@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './modules/Login'
+import UserList from './modules/UserList'
+import FilmDetail from './modules/FilmDetail'
+// import PrivateRoute from './components/routes/privateRoute';
+// import PublicRoute from './components/routes/publicRoute';
 
-function App() {
+const App = () => {  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>      
+      <Routes>
+
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/user-list" element={<UserList />} />
+        <Route exact path="/film-detail" element={<FilmDetail />} />
+
+        {/* <Route exact path='/' element={<PublicRoute />}>
+          <Route exact path='/' element={<Login />} />
+        </Route> */}
+
+        {/* <Route exact path='/user-list' element={<PrivateRoute />}>
+          <Route exact path='/user-list' element={<UserList />} />
+        </Route> */}
+
+        <Route path="*" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
