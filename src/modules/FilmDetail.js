@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { Table } from 'reactstrap'
 import BarChart from '../components/BarChart'
+import NavBar from '../components/NavBar'
 
 const UserList = () => {
     const [personajes, setPersonajes] = useState([]);
@@ -66,6 +67,7 @@ const UserList = () => {
 
     return (
         <div className="row g-0 auth-wrapper">
+            <NavBar oldUrl={'/user-list'}/>
             <section id="contact-us" className="aios-scroll-section" data-aios-scroll-title="Contact US">
                 <div className="row mx-3 gap-3 justify-content-center">
                     <div className="col-md-6" style={{ textAlign: 'center' }}>

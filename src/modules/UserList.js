@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import { Table } from 'reactstrap'
+import NavBar from '../components/NavBar'
 
 const UserList = () => {
     const [films, setFilms] = useState([]);
@@ -39,11 +40,11 @@ const UserList = () => {
 
     const toDetail = (item) => {
         console.log("item ==>", item);
-        
+
         const filmItemList = JSON.parse(localStorage.getItem("film-detail") || "[]");
         filmItemList.push(item)
 
-        localStorage.setItem('film-detail', JSON.stringify(filmItemList));              
+        localStorage.setItem('film-detail', JSON.stringify(filmItemList));
 
         navigate("/film-detail", {
             state: {
@@ -57,6 +58,7 @@ const UserList = () => {
 
     return (
         <div className="row g-0 auth-wrapper">
+            <NavBar oldUrl={'/'} />
             <section id="contact-us" className="aios-scroll-section" data-aios-scroll-title="Contact US">
                 <div className="row mx-3 gap-3 justify-content-center">
                     <div className="col-md-6" style={{ textAlign: 'center' }}>

@@ -5,7 +5,7 @@ import cryptoJs from 'crypto-js'
 import Form from '../utilities/Forms'
 import Paisaje from '../assets/video/paisaje.mp4'
 import Logo4 from '../assets/img/logo4.png'
-import AlertComponent from '../components/alert'
+import AlertComponent from '../components/Alert'
 import { LOGIN_USER } from '../reducers/authReducer'
 // import { URL, API_KEY } from '../config'
 
